@@ -1,2 +1,2 @@
 # Category
-Serviço de Gerenciamento de categorias Unico.
+Serviço de Gerenciamento de categorias único.
