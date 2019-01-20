@@ -15,14 +15,8 @@ class CategoryController extends Controller
     public function index()
     {
         
-        $info = array([
-            'info'=>[
-                'description'=>'Serviço para gerenciamento de categorias em geral',
-                'version'=>'1.0.0'
-            ]
-        ]);
-
-        return json_encode($info);
+        return Category::all();
+        
     }
 
     /**
@@ -44,7 +38,12 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $category = new Category();
-        
+
+        $category->code = $request->code;
+        $category->name = $request->name;
+        $category->description = $request->description;
+
+        $category->save();
         
     }
 
